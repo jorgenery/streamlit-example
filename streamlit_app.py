@@ -97,6 +97,7 @@ def score_analyzer(questions, links):
     # Calcula a relevância semântica para cada link relacionado
     relevance_scores = []
     regenerative_ai_scores = []
+    relevance_score = 0
     for link in links:
         link_content = requests.get(link).text
         link_text = BeautifulSoup(link_content, 'html.parser').get_text()
