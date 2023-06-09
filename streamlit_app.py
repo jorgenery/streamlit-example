@@ -112,7 +112,7 @@ def score_analyzer(questions, links):
         regenerative_ai_score = any(regenerative_ai_scores)
         score = regenerative_ai_score
     else:
-        score = any(relevance_scores)
+        score = relevance_score
     return score
 
 def sub_links(soup, base_url):
